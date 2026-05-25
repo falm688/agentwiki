@@ -182,8 +182,13 @@
       "bases:新建数据库": false
     }
   },
-  "active": "6624f05b018c486a",
+  "active": "ea4cc303f4d212a0",
   "lastOpenFiles": [
+    "bin/wiki-search.sh",
+    "bin",
+    "CLAUDE.md",
+    "AGENTS.md",
+    "llms-full.txt",
     "decisions/2026-05-25-market-regime-discovery.md",
     "decisions/2026-05-25-freq-test.md",
     "decisions/2026-05-25-param-test.md",
@@ -203,8 +208,6 @@
     "decisions",
     "backtests",
     "strategies/right-side",
-    "strategies",
-    "欢迎.md",
-    "未命名.base"
+    "欢迎.md"
   ]
 }

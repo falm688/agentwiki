@@ -1,0 +1,11 @@
+# hermes-trading-wiki
+> 量化交易知识库 — 策略、回测、决策记录
+
+## 快速导航
+- [README.md](README.md) — 总览
+- [INDEX.md](INDEX.md) — 按场景检索
+- [schema/conventions.md](schema/conventions.md) — 写作规范
+- [strategies/](strategies/) — 策略逻辑
+- [backtests/](backtests/) — 回测结果
+- [decisions/](decisions/) — 关键决策
+- [market/](market/) — 市场研究

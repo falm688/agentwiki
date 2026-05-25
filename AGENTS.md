@@ -1,64 +1,28 @@
-# Hermes 量化交易知识库 — AGENTS.md
+# 交易与学习知识库 — AGENTS.md
 
-> 任何 AI Agent（Claude、GPT、Codex、Gemini 等）接入本知识库时，请先阅读此文件。
+> 本文件供 AI Agent 读取，了解知识库结构和规范。
 
-## 知识库位置
+## Vault 位置
 
 ```
-/Users/falm/wiki/agnetwiki/
+本地路径: /Users/falm/wiki/agnetwiki/
+环境变量: $WIKI
+快捷链接: ~/wiki
+GitHub:   https://github.com/falm688/hermes-trading-wiki
 ```
 
-或通过环境变量：
-```
-$TRADING_WIKI
-```
+## 领域目录
 
-## 快速入门
-
-1. 读 `llms.txt`（30 秒概述）
-2. 读 `INDEX.md`（按场景导航）
-3. 需要完整上下文读 `llms-full.txt`
-4. 搜索特定内容用：`grep -r "关键词" $TRADING_WIKI/`
-
-## 知识结构
-
-| 目录 | 内容 | 谁维护 |
+| 子目录 | 领域 | 维护者 |
 |:---|:---|:---|
-| `strategies/` | 策略逻辑（V4 / 右侧） | Agent 写，人类审核 |
-| `backtests/` | 回测结果和分析 | Agent 写 |
-| `decisions/` | 关键决策记录（按日期） | Agent 写 |
-| `raw/` | 原始数据（回测日志等） | 只读，Agent 不写 |
-| `schema/` | 写作规范 | Agent 读 |
-| `references/` | 参考数据 | 待完善 |
-| `learning/` | AI应用开发学习（转行） | ai-tutor |
+| `a-stock/` | A股量化交易 | Alex (Hermes) |
+| `btc/` | BTC 加密货币 | BTC Agent |
+| `learning/` | 个人学习 | 学习导师 |
 
-### 多 Agent 边界
+## 作为 Agent 的读/写规范
 
-| Agent | 负责区域 | 不触碰 |
-|:---|:---|:---|
-| 量化 Agent | `strategies/`, `backtests/`, `decisions/` | `learning/` |
-| ai-tutor | `learning/` | `strategies/`, `backtests/`, `decisions/` |
-
-**冲突解决**: 如有重叠需求（如用 AI 分析量化策略），在 `learning/` 下建临时子目录，用完归档。
-
-## 写作规范
-
-写新内容前先读 `schema/conventions.md`。
-
-## 文件规范
-
-- 所有文件用 Markdown (`*.md`)
-- 必须有 YAML frontmatter（tags/status/created）
-- 一句话结论置顶
-- 链接用相对路径
-
-## Git 工作流
-
-```bash
-cd $TRADING_WIKI
-git pull           # 先同步
-# ... 编辑文件 ...
-git add -A
-git commit -m "描述性提交信息"
-git push
-```
+1. **只看自己的目录** — 不要越界读写其他 Agent 的领域
+2. **格式** — 每个文件必须含 YAML frontmatter：`tags` / `status` / `created`
+3. **结论置顶** — 文件第一行用加粗写一句话结论
+4. **每个目录有 INDEX.md** — 让其他 Agent 知道里面有什么
+5. **写之前 `git pull`，写之后 `git push`**

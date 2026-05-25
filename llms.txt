@@ -1,16 +1,8 @@
-# Hermes 量化交易知识库
-> 左侧超跌反转（V4）+ 右侧趋势跟随的双策略框架
+/Users/falm/wiki/agnetwiki/
 
-## 快速入口
-- INDEX.md    — 按场景导航
-- strategies/ — 策略逻辑
-- backtests/  — 回测结果
-- decisions/  — 决策记录
+多领域知识库 Vault。每个子目录对应一个独立领域：
+- a-stock/  — A股量化交易
+- btc/      — BTC 加密货币
+- learning/ — 个人学习
 
-## 一句话策略画像
-V4 在结构性熊市最佳（+70.72%），全面熊市大亏（-38.33%），牛市平庸（跟涨）。
-
-## 核心文件
-- strategies/v4-reversal.md     — V4 策略完整文档
-- backtests/yearly-breakdown.md — 年度表现拆解
-- schema/conventions.md         — 写作规范
+Agent 入驻流程见 ONBOARDING.md。

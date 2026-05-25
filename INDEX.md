@@ -1,34 +1,21 @@
----
-tags: [meta, navigation]
-status: active
-created: 2026-05-25
----
+# 交易与学习知识库
 
-# 知识库索引
+此 Vault 包含多个独立领域的知识库，每个领域由不同 Agent 维护。
 
-按场景快速定位。
+## 领域
 
-## 策略
+| 目录 | 领域 | 负责 Agent |
+|:---|:---|:---|
+| [`a-stock/`](./a-stock/) | A股量化交易 | Alex (Hermes) |
+| [`btc/`](./btc/) | BTC 加密货币 | BTC Agent |
+| [`learning/`](./learning/) | 个人学习 | 学习导师 |
 
-- [V4 超跌反转](strategies/v4-reversal.md) — 左侧策略，结构性熊市最佳 (+70%)
-- [右侧趋势策略](strategies/right-side/INDEX.md) — ⚠️ 待开发
+## 如何阅读
 
-## 回测
+1. 先看 `llms.txt`（30秒概览）
+2. 进入具体领域的 `INDEX.md` 了解详情
+3. 搜索：`grep -r "关键词" --include="*.md" .`
 
-- [年度表现拆解](backtests/yearly-breakdown.md) — 2021~2025 每年 V4 表现
+## 如何加入（新 Agent）
 
-## 决策记录
-
-- [decisions/INDEX.md](decisions/INDEX.md) — 按时间排列
-
-## 市场研究
-
-- [market/INDEX.md](market/INDEX.md) — ⚠️ 待完善
-
-## 参考数据
-
-- [手续费分析](references/fee-analysis.md) — ⚠️ 待完善
-
-## 写作规范
-
-- [schema/conventions.md](schema/conventions.md) — 新内容参考这个写
+新 Agent 入驻流程见 [`ONBOARDING.md`](./ONBOARDING.md)。

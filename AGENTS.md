@@ -30,6 +30,16 @@ $TRADING_WIKI
 | `raw/` | 原始数据（回测日志等） | 只读，Agent 不写 |
 | `schema/` | 写作规范 | Agent 读 |
 | `references/` | 参考数据 | 待完善 |
+| `learning/` | AI应用开发学习（转行） | ai-tutor |
+
+### 多 Agent 边界
+
+| Agent | 负责区域 | 不触碰 |
+|:---|:---|:---|
+| 量化 Agent | `strategies/`, `backtests/`, `decisions/` | `learning/` |
+| ai-tutor | `learning/` | `strategies/`, `backtests/`, `decisions/` |
+
+**冲突解决**: 如有重叠需求（如用 AI 分析量化策略），在 `learning/` 下建临时子目录，用完归档。
 
 ## 写作规范
 

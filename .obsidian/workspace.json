@@ -11,16 +11,28 @@
             "id": "6624f05b018c486a",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "未命名.base",
-                "viewName": "表格"
+                "file": "欢迎.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "未命名"
+              "icon": "lucide-file",
+              "title": "欢迎"
+            }
+          },
+          {
+            "id": "862e6887b6df1d90",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -40,7 +52,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -93,7 +105,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "未命名.base",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "未命名 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -112,12 +123,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "未命名.base",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "未命名 的出链列表"
+              "title": "出链"
             }
           },
           {
@@ -155,13 +165,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "未命名.base",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "未命名 的大纲"
+              "title": "大纲"
             }
           }
         ]
@@ -184,11 +193,25 @@
   },
   "active": "ea4cc303f4d212a0",
   "lastOpenFiles": [
+    "learning/curriculum/p0-w1-overview.md",
+    "欢迎.md",
+    "learning/interview/python-basics.md",
+    "未命名.base",
+    "未命名 1.base",
+    "AGENTS.md",
+    "README.md",
+    "INDEX.md",
+    "CLAUDE.md",
+    "learning/daily-tasks/2026-05-25.md",
+    "learning/INDEX.md",
+    "learning/projects",
+    "learning/market-research",
+    "learning/interview",
+    "learning/daily-tasks",
+    "learning/curriculum",
+    "learning",
     "bin/wiki-search.sh",
     "bin",
-    "CLAUDE.md",
-    "AGENTS.md",
-    "llms-full.txt",
     "decisions/2026-05-25-market-regime-discovery.md",
     "decisions/2026-05-25-freq-test.md",
     "decisions/2026-05-25-param-test.md",
@@ -197,17 +220,6 @@
     "strategies/right-side/INDEX.md",
     "strategies/v4-reversal.md",
     "backtests/yearly-breakdown.md",
-    "llms.txt",
-    "INDEX.md",
-    "README.md",
-    "schema/conventions.md",
-    "references",
-    "schema",
-    "raw",
-    "market",
-    "decisions",
-    "backtests",
-    "strategies/right-side",
-    "欢迎.md"
+    "schema/conventions.md"
   ]
 }

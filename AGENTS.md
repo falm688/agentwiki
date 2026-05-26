@@ -5,7 +5,7 @@
 ## Vault 位置
 
 ```
-本地路径: /Users/falm/wiki/agnetwiki/
+本地路径: /Users/falm/wiki/agentwiki/
 环境变量: $WIKI
 快捷链接: ~/wiki
 GitHub:   https://github.com/falm688/hermes-trading-wiki

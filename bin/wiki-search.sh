@@ -3,7 +3,7 @@
 # 用法: wiki-search <关键词>
 # 不依赖任何 SDK/框架，纯 grep，任何 Agent 都能用
 
-WIKI="${TRADING_WIKI:-/Users/falm/wiki/agnetwiki}"
+WIKI="${TRADING_WIKI:-/Users/falm/wiki/agentwiki}"
 query="$*"
 
 if [ -z "$query" ]; then

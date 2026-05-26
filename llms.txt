@@ -1,4 +1,4 @@
-/Users/falm/wiki/agnetwiki/
+/Users/falm/wiki/agentwiki/
 
 多领域知识库 Vault。每个子目录对应一个独立领域：
 - a-stock/  — A股量化交易

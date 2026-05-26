@@ -15,13 +15,13 @@ created: 2026-05-25
 WIKI="$TRADING_WIKI"
 
 # 没设环境变量？直接指定
-WIKI="/Users/falm/wiki/agnetwiki/"
+WIKI="/Users/falm/wiki/agentwiki/"
 
 # 快捷链接
 cd ~/wiki
 
 # GitHub 克隆（如果本地没有）
-git clone https://github.com/falm688/hermes-trading-wiki.git
+git clone https://github.com/falm688/agentwiki.git
 ```
 
 ## 第二步：确认你的领域

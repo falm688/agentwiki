@@ -18,6 +18,7 @@ created: 2026-06-02
 - [SQL引擎验证结果](./backtest/sql-engine-results.md) — 2026-05-28
 - [参数扫描](./backtest/param-sweep.md) — ED/TP/SL三维扫描
 - [过拟合检查](./backtest/overfitting-check.md)
+- [V2分类器+hysteresis参数扫描](./backtests/v2-climate-sweep-2026-06-03.md) — 2026-06-03
 
 ## 数据
 

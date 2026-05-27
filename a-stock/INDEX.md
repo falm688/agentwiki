@@ -1,37 +1,84 @@
 ---
-tags: [index, a-stock]
+title: A股量化交易知识库 — 总目录
+tags: [index, a-stock, 天时V4, V4超跌]
 status: active
-created: 2026-06-02
+last_updated: 2026-06-03
 ---
 
-# A股量化交易知识库 — 目录
+# A股量化交易知识库
 
-> 本目录记录A股量化策略开发、回测、决策的全过程。
+> 策略开发、回测验证、模拟盘运行的全过程记录
 
-## 策略框架
+---
 
-- **[天时V4 — 最优策略 +259%/年化34%](./天时V4-策略文档.md)** 🏆 — V3.1分类器+企稳过滤+ETF轮动
-- [右侧趋势策略（驭风V5）](./strategies/right-side-strategy.md) — V4+气候分类器+ETF轮动
-- [气候分类器V2 — bug修复](./climate-classifier-v2-bugfix.md) — 死区修复，V1→V2重写
+## 策略总览
 
-## 回测
+| 策略 | 状态 | 年化 | 回撤 | 说明 |
+|:----|:----:|:---:|:---:|:-----|
+| **天时V4** 🏆 | ✅ 最优 | **31.3%** | **19.1%** | 气候分类器+V4超跌+ETF轮动 |
+| 潜龙（纯V4） | ⏸ 模拟盘在用 | 17.4% | 30.9% | 基础版V4，待升级为天时V4 |
 
-- [SQL引擎验证结果](./backtest/sql-engine-results.md) — 2026-05-28
-- [参数扫描](./backtest/param-sweep.md) — ED/TP/SL三维扫描
-- [过拟合检查](./backtest/overfitting-check.md)
-- [V2分类器+hysteresis参数扫描](./backtests/v2-climate-sweep-2026-06-03.md) — 2026-06-03
+**详见**：[天时V4-策略文档](./天时V4-策略文档.md)
 
-## 数据
+---
 
-- [MySQL数据结构](./data/mysql-schema.md)
-- [tushare数据更新](./data/tushare-update.md)
+## 目录
 
-## 实盘
+### 📐 策略文档
+- [天时V4 — 最优策略](./天时V4-策略文档.md) — 完整架构、参数、回测结果
+- [实盘操作手册](./实盘操作手册.md) — 模拟盘运行指南
 
-- [模拟盘系统](./simulation/sim-trading.md)
-- [V4模拟盘运行记录](./simulation/v4-sim-log.md)
+### 🔬 回测 & 验证
+- [SQL引擎回测结果](./backtests/sql-engine-summary.md) — 最终验证 +470.52%/年化31.3%
+- [掘金量化交叉验证-差异诊断](./掘金交叉验证-差异诊断.md) — 掘金与SQL引擎结果差异分析
+- [逐年收益分解](./backtests/yearly-breakdown.md) — 各年份详细收益
 
-## 决策记录
+### 🗂 脚本目录
 
-- [策略方向变更](./decisions/strategy-direction-change.md) — 从qteasy到SQL引擎
-- [参数扫描结论](./decisions/param-scan-conclusions.md) — ED无效/SL=12%最优
+```text
+strategies/tools/
+├── active/          # ✅ 当前在用的核心脚本
+│   ├── v4_sim.py              # 模拟盘主程序（潜龙V4）
+│   ├── daily_sim.py           # 每日模拟盘执行
+│   ├── morning_exec.py        # 早盘执行
+│   ├── daily_monitor.py       # 每日监控
+│   ├── bt_tianshi_final.py    # 天时V4最终回测（SQL引擎，+470.52%）
+│   ├── bt_stab_test.py        # 入场企稳过滤验证
+│   ├── bt_overfit_test.py     # 过拟合验证
+│   ├── bt_v31_sweep.py        # VOL20_LOW参数扫描
+│   ├── bt_v3_noforce.py       # V3分类器回测
+│   ├── bt_v4_sim_exact.py     # 模拟盘精确复现
+│   ├── bt_v2_vs_v4.py         # 天时V4 vs 潜龙对比
+│   └── 天时V4_掘金交叉验证_v2.py  # 掘金量化交叉验证(v2修复版)
+│
+├── reference/       # ⚠️ 历史参考脚本
+│   └── (旧回测/扫描/趋势探索等21个)
+│
+└── archive/         # 🗑️ 已废弃实验脚本
+    └── (qteasy/旧动量/旧V4等21个)
+```
+
+### 📋 决策记录
+详见 `archive_decisions_2026-05/`（已归档）
+
+---
+
+## 当前开发进度
+
+- [x] 天时V4 — SQL引擎验证通过 (+470.52%)
+- [x] 入场企稳过滤 — 过拟合验证通过
+- [x] 气候分类器BUG修复 — 死区修复完成
+- [ ] 掘金量化交叉验证 — 脚本v2已发，待用户Windows运行
+- [ ] 模拟盘升级 — 潜龙→天时V4（待掘金验证通过后切换）
+- [ ] 气候分类器CASH锁死问题 — 需要策略级别调整
+
+---
+
+## 快速导航
+
+| 想做什么 | 看这里 |
+|:---------|:-------|
+| 跑一遍最终回测 | `active/bt_tianshi_final.py` |
+| 修改模拟盘参数 | `active/v4_sim.py` 顶部参数区 |
+| 看掘金对比 | [掘金交叉验证-差异诊断](./掘金交叉验证-差异诊断.md) |
+| 查看历史讨论 | `archive_decisions_2026-05/` |

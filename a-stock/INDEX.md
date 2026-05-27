@@ -39,26 +39,24 @@ last_updated: 2026-06-03
 ### 🗂 脚本目录
 
 ```text
-strategies/tools/
-├── active/          # ✅ 当前在用的核心脚本
-│   ├── v4_sim.py              # 模拟盘主程序（潜龙V4）
-│   ├── daily_sim.py           # 每日模拟盘执行
-│   ├── morning_exec.py        # 早盘执行
-│   ├── daily_monitor.py       # 每日监控
-│   ├── bt_tianshi_final.py    # 天时V4最终回测（SQL引擎，+470.52%）
-│   ├── bt_stab_test.py        # 入场企稳过滤验证
-│   ├── bt_overfit_test.py     # 过拟合验证
-│   ├── bt_v31_sweep.py        # VOL20_LOW参数扫描
-│   ├── bt_v3_noforce.py       # V3分类器回测
-│   ├── bt_v4_sim_exact.py     # 模拟盘精确复现
-│   ├── bt_v2_vs_v4.py         # 天时V4 vs 潜龙对比
-│   └── 天时V4_掘金交叉验证_v2.py  # 掘金量化交叉验证(v2修复版)
+strategies/
+├── core/                     # 共享核心模块
+│   ├── data.py               # 数据加载（MySQL + 前复权）
+│   ├── backtest.py           # 回测引擎
+│   ├── factors.py            # 因子加载（FactorStore）
+│   ├── simulator.py          # 多策略模拟交易引擎 ← 新
+│   ├── realtime.py           # 腾讯实时行情API ← 新
+│   └── audit.py              # 审计数据包
 │
-├── reference/       # ⚠️ 历史参考脚本
-│   └── (旧回测/扫描/趋势探索等21个)
+├── tools/
+│   ├── v6tr2_daily_signal.py    # V6+TR2 每日闭循环 ← 当前在用
+│   ├── v6tr2_weekly_review.py   # V6+TR2 周复盘 ← 当前在用
+│   └── active/               # 旧脚本
 │
-└── archive/         # 🗑️ 已废弃实验脚本
-    └── (qteasy/旧动量/旧V4等21个)
+└── output/
+    ├── sim_{策略名}_state.json   # 各策略独立持仓状态
+    ├── sim_{策略名}_daily.json   # 每日信号
+    └── sim_{策略名}_weekly.json  # 周复盘
 ```
 
 ### 📋 决策记录

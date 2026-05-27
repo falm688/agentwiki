@@ -10,6 +10,7 @@ created: 2026-06-02
 
 ## 策略框架
 
+- **[天时V4 — 最优策略 +259%/年化34%](./天时V4-策略文档.md)** 🏆 — V3.1分类器+企稳过滤+ETF轮动
 - [右侧趋势策略（驭风V5）](./strategies/right-side-strategy.md) — V4+气候分类器+ETF轮动
 - [气候分类器V2 — bug修复](./climate-classifier-v2-bugfix.md) — 死区修复，V1→V2重写
 

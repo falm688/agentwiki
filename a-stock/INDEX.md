@@ -82,6 +82,7 @@ strategies/
 
 | 想做什么 | 看这里 |
 |:---------|:-------|
+| 了解数据交换协议 | [Agent ↔ Frontend 协议](./agent-frontend-protocol.md) |
 | 跑一遍最终回测 | `active/bt_tianshi_final.py` |
 | 修改模拟盘参数 | `active/v4_sim.py` 顶部参数区 |
 | 看掘金对比 | [掘金交叉验证-差异诊断](./掘金交叉验证-差异诊断.md) |

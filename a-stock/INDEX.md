@@ -98,8 +98,9 @@ trading/                             # ~/.hermes/profiles/alex/home/trading/
 | 想做什么 | 看这里 |
 |:---------|:-------|
 | 了解数据交换协议 | [Agent ↔ Frontend 协议](./agent-frontend-protocol.md) |
-| 查策略文件位置 | [策略文件地图](./策略文件地图.md) — 所有代码/Cron/数据路径 |
-| 运行回测 | `active/bt_tianshi_final.py` |
-| 修改模拟盘参数 | `active/v4_sim.py` 顶部参数区 |
+| 查策略文件位置 | [策略文件地图](./策略文件地图.md) |
+| **系统操作指南** | **[📖 用户手册](./用户手册.md)** ← 必读 |
+| 运行回测 | `scripts/compare_annual.py` |
+| 修改策略参数 | `strategies/*/config.json` |
 | 看掘金对比 | [掘金交叉验证-差异诊断](./掘金交叉验证-差异诊断.md) |
 | 查看历史讨论 | `archive_decisions_2026-05/` |

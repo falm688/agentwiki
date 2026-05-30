@@ -36,27 +36,42 @@ last_updated: 2026-06-03
 - [掘金量化交叉验证-差异诊断](./掘金交叉验证-差异诊断.md) — 掘金与SQL引擎结果差异分析
 - [逐年收益分解](./backtests/yearly-breakdown.md) — 各年份详细收益
 
-### 🗂 脚本目录
+### 🗂 脚本目录（最新结构）
 
 ```text
-strategies/
-├── core/                     # 共享核心模块
-│   ├── data.py               # 数据加载（MySQL + 前复权）
-│   ├── backtest.py           # 回测引擎
-│   ├── factors.py            # 因子加载（FactorStore）
-│   ├── simulator.py          # 多策略模拟交易引擎 ← 新
-│   ├── realtime.py           # 腾讯实时行情API ← 新
-│   └── audit.py              # 审计数据包
+trading/                             # ~/.hermes/profiles/alex/home/trading/
+├── core/                            # 共享核心模块
+│   ├── base.py                      # BaseStrategy + Signal
+│   ├── backtest_engine.py           # 回测引擎
+│   ├── data_loader.py               # 数据加载（MySQL + 前复权）
+│   ├── data.py / factors.py         # 旧版兼容
+│   ├── simulator_v2.py              # 模拟交易引擎（MySQL版）
+│   ├── simulator.py                 # 旧版模拟引擎
+│   ├── realtime.py                  # 腾讯实时行情API
+│   ├── config.py                    # 统一配置
+│   ├── portfolio.py                 # 组合管理
+│   ├── risk_control.py              # 风控系统
+│   └── audit.py                     # 审计数据包
 │
-├── tools/
-│   ├── v6tr2_daily_signal.py    # V6+TR2 每日闭循环 ← 当前在用
-│   ├── v6tr2_weekly_review.py   # V6+TR2 周复盘 ← 当前在用
-│   └── active/               # 旧脚本
+├── strategies/                      # 策略实现
+│   ├── tianshi_tr/                  # 天时·换手率
+│   ├── tianshi_stab/               # 天时·深跌企稳
+│   ├── etf_momentum/               # 宽基动量
+│   └── short_term/                  # 短线打板
 │
-└── output/
-    ├── sim_{策略名}_state.json   # 各策略独立持仓状态
-    ├── sim_{策略名}_daily.json   # 每日信号
-    └── sim_{策略名}_weekly.json  # 周复盘
+├── tools/                           # 执行脚本
+│   ├── daily_execute_1450.py        # 14:50统一入口
+│   ├── fast_loader.py               # 快速数据加载+缓存
+│   ├── sync_data_1830.py            # 数据补录
+│   ├── daily_health_check.py        # 健康检查
+│   └── *_daily_signal.py / _wrapper.sh
+│
+├── scripts/                         # 回测 & 分析
+├── tests/                           # 测试
+├── output/                          # 模拟盘状态
+├── data/backtest/                   # 回测结果CSV
+├── active/ / analysis/ / archive/   # 研究/废弃脚本
+└── legacy_strategies/               # stock-trading旧策略参考
 ```
 
 ### 📋 决策记录
